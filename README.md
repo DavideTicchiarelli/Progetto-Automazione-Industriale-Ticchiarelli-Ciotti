@@ -1,0 +1,1 @@
+# Progetto-Automazione-Industriale-Ciotti-Ticchiarelli
