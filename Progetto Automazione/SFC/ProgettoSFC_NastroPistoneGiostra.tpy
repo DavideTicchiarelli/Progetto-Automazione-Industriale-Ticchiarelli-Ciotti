@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>C:\Users\david\OneDrive\Desktop\Controllo-impianto-industriale-main\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
+		<Path>\\Mac\Home\Desktop\Progetto-Automazione-Industriale-Ticchiarelli-Ciotti-main\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-16T11:41:13</ChangeDate>
+		<ChangeDate>2023-03-16T16:56:39</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -76,37 +76,29 @@
 			</ArrayInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="3000021B" Crc32="3545312806" LastChange="2023-03-16T11:11:25">ALTEZZA</Name>
+			<Name Decoration="3000021B" Crc32="3510379586" LastChange="2023-03-16T15:35:44">ALTEZZA</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
-				<Text>altezza_nd</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
 				<Text>basso</Text>
-				<Enum>1</Enum>
+				<Enum>0</Enum>
 			</EnumInfo>
 			<EnumInfo>
 				<Text>alto</Text>
-				<Enum>2</Enum>
+				<Enum>1</Enum>
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="300001C4" Crc32="0728580704" LastChange="2023-03-16T11:10:42">COLORE</Name>
+			<Name Decoration="300001C4" Crc32="0500253582" LastChange="2023-03-16T15:31:39">COLORE</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
-				<Text>colore_nd</Text>
+				<Text>rosso</Text>
 				<Enum>0</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>rosso</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-			<EnumInfo>
 				<Text>altro</Text>
-				<Enum>2</Enum>
+				<Enum>1</Enum>
 			</EnumInfo>
 		</DataType>
 		<DataType>
@@ -126,7 +118,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="10048B1D" Crc32="2077769589" LastChange="2022-07-13T15:13:48">POSTO</Name>
+			<Name Decoration="10048B1D" Crc32="3707381483" LastChange="2022-07-13T15:13:48">POSTO</Name>
 			<BitSize>64</BitSize>
 			<SubItem>
 				<Name>Presenza</Name>
@@ -945,7 +937,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10321A3F" Crc32="2637295720" LastChange="2023-03-16T11:41:12">MAIN</Name>
+			<Name Decoration="1049A3E8" Crc32="0376067967" LastChange="2023-03-16T16:56:37">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -986,6 +978,9 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.i</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.j</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.giostra_BUSY</Name>
@@ -1051,10 +1046,19 @@
 					<Name>MAIN.timer_giostra</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.mytime2</Name>
+					<Name>MAIN.T_giostra</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.timer_giostra_on</Name>
+					<Name>MAIN.mytimegiostra</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.T_trapano</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.mytimetrapano</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_trapano</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.INIT</Name>
@@ -1078,13 +1082,70 @@
 					<Name>MAIN._GIOSTRA_RIPOSO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.PRIMO_POSTO</Name>
+					<Name>MAIN.P1_VUOTO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._PRIMO_POSTO</Name>
+					<Name>MAIN._P1_VUOTO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._PISTONE_AVANTI</Name>
+					<Name>MAIN.P1_OCCUPATO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._P1_OCCUPATO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.COLORE_NULL</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._COLORE_NULL</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.TEST_COLORE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._TEST_COLORE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.TRAPANO_RIPOSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._TRAPANO_RIPOSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.TRAPANO_GIU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._TRAPANO_GIU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.TRAPANO_AVVIO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._TRAPANO_AVVIO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.TRAPANO_SU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._TRAPANO_SU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.GIOSTRA_PRONTA</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._GIOSTRA_PRONTA</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.GIOSTRA_ON</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._GIOSTRA_ON</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.PISTONEAVANTI</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PISTONEAVANTI</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.PISTONE_DIETRO</Name>
@@ -1130,7 +1191,7 @@
 				<![CDATA[Uscite]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>12</IOffset>
+			<IOffset>8</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1147,21 +1208,21 @@
 			<Name TaskPrio="1">MAIN.timer_pistone</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>16</IOffset>
+			<IOffset>12</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.mytime</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>40</IOffset>
+			<IOffset>36</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.timer_pist</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>14</IOffset>
+			<IOffset>10</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1171,7 +1232,7 @@
 				<![CDATA[Variabili Nastro]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>15</IOffset>
+			<IOffset>11</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1198,17 +1259,24 @@
 			<Name TaskPrio="1">MAIN.Giostra</Name>
 			<Type Decoration="20019CBD">ARRAY [0..7] OF POSTO</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>44</IOffset>
+			<IOffset>40</IOffset>
 			<BitSize>512</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.i</Name>
 			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>104</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.j</Name>
+			<Type>INT</Type>
 			<Comment>
 				<![CDATA[Ingressi]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>108</IOffset>
+			<IOffset>106</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1219,21 +1287,21 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.sensore_colore</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.sensore_colore</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>17</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.trapano_basso</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.trapano_basso</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>21</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.trapano_alto</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.trapano_alto</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>19</IOffset>
@@ -1247,14 +1315,14 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.tastatore_alto</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.tastatore_alto</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>23</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.pennarello_alto</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.pennarello_alto</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>44</IOffset>
@@ -1275,7 +1343,7 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.pistone_PT5_indietro</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT5_indietro</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>41</IOffset>
@@ -1289,7 +1357,7 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.pistone_PT6_indietro</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT6_indietro</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>46</IOffset>
@@ -1306,21 +1374,21 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">MAIN.movimento_giostra</Name>
+			<Name Static="Output" TaskPrio="1">MAIN.movimento_giostra</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset>28</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">MAIN.trapano_on</Name>
+			<Name Static="Output" TaskPrio="1">MAIN.trapano_on</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset>31</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">MAIN.trapano_down</Name>
+			<Name Static="Output" TaskPrio="1">MAIN.trapano_down</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset>56</IOffset>
@@ -1355,24 +1423,45 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>MAIN.timer_giostra</Name>
+			<Name TaskPrio="1">MAIN.timer_giostra</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>108</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.T_giostra</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>112</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>MAIN.mytime2</Name>
+			<Name TaskPrio="1">MAIN.mytimegiostra</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>136</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>MAIN.timer_giostra_on</Name>
+			<Name TaskPrio="1">MAIN.T_trapano</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>140</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.mytimetrapano</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>164</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_trapano</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>110</IOffset>
+			<IOffset>109</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 	</Symbols>
