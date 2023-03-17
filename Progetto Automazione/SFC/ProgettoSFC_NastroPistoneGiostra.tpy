@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>\\Mac\Home\Desktop\Progetto-Automazione-Industriale-Ticchiarelli-Ciotti-main\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
+		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-16T16:56:39</ChangeDate>
+		<ChangeDate>2023-03-17T15:42:45</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -937,7 +937,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="1049A3E8" Crc32="0376067967" LastChange="2023-03-16T16:56:37">MAIN</Name>
+			<Name Decoration="104CCBFC" Crc32="2142848397" LastChange="2023-03-17T15:42:42">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -1043,13 +1043,13 @@
 					<Name>MAIN.pistone_PT6_on</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.timer_giostra</Name>
-				</Symbol>
-				<Symbol>
 					<Name>MAIN.T_giostra</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.mytimegiostra</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_giostra</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.T_trapano</Name>
@@ -1059,6 +1059,15 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.timer_trapano</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.T_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.mytimep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_p1</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.INIT</Name>
@@ -1423,25 +1432,25 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.timer_giostra</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>108</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
 			<Name TaskPrio="1">MAIN.T_giostra</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>112</IOffset>
+			<IOffset>108</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.mytimegiostra</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>136</IOffset>
+			<IOffset>132</IOffset>
 			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_giostra</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>136</IOffset>
+			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.T_trapano</Name>
@@ -1461,7 +1470,28 @@
 			<Name TaskPrio="1">MAIN.timer_trapano</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>109</IOffset>
+			<IOffset>137</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.T_p1</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>212</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.mytimep1</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>168</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_p1</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>138</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 	</Symbols>
