@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-17T15:42:45</ChangeDate>
+		<ChangeDate>2023-03-18T14:39:42</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -937,7 +937,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="104CCBFC" Crc32="2142848397" LastChange="2023-03-17T15:42:42">MAIN</Name>
+			<Name Decoration="1052F04A" Crc32="3943682527" LastChange="2023-03-18T14:39:31">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -1091,6 +1091,12 @@
 					<Name>MAIN._GIOSTRA_RIPOSO</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.STATO_TEST_P1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._STATO_TEST_P1</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.P1_VUOTO</Name>
 				</Symbol>
 				<Symbol>
@@ -1103,6 +1109,12 @@
 					<Name>MAIN._P1_OCCUPATO</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.STATO_TEST_COLORE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._STATO_TEST_COLORE</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.COLORE_NULL</Name>
 				</Symbol>
 				<Symbol>
@@ -1113,6 +1125,12 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN._TEST_COLORE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.STATO_TEST_TRAPANO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._STATO_TEST_TRAPANO</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.TRAPANO_RIPOSO</Name>
