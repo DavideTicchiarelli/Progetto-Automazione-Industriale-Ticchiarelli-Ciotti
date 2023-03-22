@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-18T14:39:42</ChangeDate>
+		<ChangeDate>2023-03-21T18:46:38</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -67,13 +67,17 @@
 	</DirectoryInfos>
 	<DataTypes>
 		<DataType>
-			<Name Decoration="20019CBD">ARRAY [0..7] OF POSTO</Name>
-			<Type Decoration="10048B1D">POSTO</Type>
-			<BitSize>512</BitSize>
-			<ArrayInfo>
-				<LBound>0</LBound>
-				<Elements>8</Elements>
-			</ArrayInfo>
+			<Name Decoration="300001C4" Crc32="0500253582" LastChange="2023-03-16T15:31:39">COLORE</Name>
+			<Type>INT</Type>
+			<BitSize>16</BitSize>
+			<EnumInfo>
+				<Text>rosso</Text>
+				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>altro</Text>
+				<Enum>1</Enum>
+			</EnumInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="3000021B" Crc32="3510379586" LastChange="2023-03-16T15:35:44">ALTEZZA</Name>
@@ -85,19 +89,6 @@
 			</EnumInfo>
 			<EnumInfo>
 				<Text>alto</Text>
-				<Enum>1</Enum>
-			</EnumInfo>
-		</DataType>
-		<DataType>
-			<Name Decoration="300001C4" Crc32="0500253582" LastChange="2023-03-16T15:31:39">COLORE</Name>
-			<Type>INT</Type>
-			<BitSize>16</BitSize>
-			<EnumInfo>
-				<Text>rosso</Text>
-				<Enum>0</Enum>
-			</EnumInfo>
-			<EnumInfo>
-				<Text>altro</Text>
 				<Enum>1</Enum>
 			</EnumInfo>
 		</DataType>
@@ -118,8 +109,8 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name Decoration="10048B1D" Crc32="3707381483" LastChange="2022-07-13T15:13:48">POSTO</Name>
-			<BitSize>64</BitSize>
+			<Name Decoration="1002826E" Crc32="2091161188" LastChange="2023-03-21T16:48:54">POSTO</Name>
+			<BitSize>48</BitSize>
 			<SubItem>
 				<Name>Presenza</Name>
 				<Type>BOOL</Type>
@@ -132,21 +123,15 @@
 				<BitSize>32</BitSize>
 				<BitOffs>16</BitOffs>
 			</SubItem>
-			<SubItem>
-				<Name>Ready</Name>
-				<Type>BOOL</Type>
-				<Comment>
-					<![CDATA[uguale a 1 quando nel posto è terminato il lavoro]]>
-				</Comment>
-				<BitSize>8</BitSize>
-				<BitOffs>48</BitOffs>
-			</SubItem>
-			<SubItem>
-				<Name>Fine_Lavorazione</Name>
-				<Type>BOOL</Type>
-				<BitSize>8</BitSize>
-				<BitOffs>56</BitOffs>
-			</SubItem>
+		</DataType>
+		<DataType>
+			<Name Decoration="2001940C">ARRAY [0..7] OF POSTO</Name>
+			<Type Decoration="1002826E">POSTO</Type>
+			<BitSize>384</BitSize>
+			<ArrayInfo>
+				<LBound>0</LBound>
+				<Elements>8</Elements>
+			</ArrayInfo>
 		</DataType>
 		<DataType>
 			<Name Decoration="10060AFD" IsDefinedInLibrary="1" Library="C:\TwinCAT\PLC\LIB\STANDARD.LIB">CTD</Name>
@@ -937,7 +922,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="1052F04A" Crc32="3943682527" LastChange="2023-03-18T14:39:31">MAIN</Name>
+			<Name Decoration="105931D5" Crc32="2546003555" LastChange="2023-03-21T18:46:32">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -956,13 +941,13 @@
 					<Name>MAIN.pistone_on</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.T_pistone</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.mytimepistone</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.timer_pistone</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.mytime</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.timer_pist</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.reset_timer</Name>
@@ -1070,6 +1055,27 @@
 					<Name>MAIN.timer_p1</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.reset_timer_trapano</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.reset_timer_giostra</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.reset_timer_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.T_pennarello</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.reset_timer_pennarello</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_pennarello</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.mytimepennarello</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.INIT</Name>
 				</Symbol>
 				<Symbol>
@@ -1091,12 +1097,6 @@
 					<Name>MAIN._GIOSTRA_RIPOSO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.STATO_TEST_P1</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN._STATO_TEST_P1</Name>
-				</Symbol>
-				<Symbol>
 					<Name>MAIN.P1_VUOTO</Name>
 				</Symbol>
 				<Symbol>
@@ -1109,12 +1109,6 @@
 					<Name>MAIN._P1_OCCUPATO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.STATO_TEST_COLORE</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN._STATO_TEST_COLORE</Name>
-				</Symbol>
-				<Symbol>
 					<Name>MAIN.COLORE_NULL</Name>
 				</Symbol>
 				<Symbol>
@@ -1125,12 +1119,6 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN._TEST_COLORE</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.STATO_TEST_TRAPANO</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN._STATO_TEST_TRAPANO</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.TRAPANO_RIPOSO</Name>
@@ -1155,6 +1143,24 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN._TRAPANO_SU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.PENNARELLO_RIPOSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PENNARELLO_RIPOSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.PENNARELLO_GIU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PENNARELLO_GIU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.PENNARELLO_SU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PENNARELLO_SU</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.GIOSTRA_PRONTA</Name>
@@ -1212,7 +1218,7 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.N_pezzi_spinti</Name>
+			<Name>MAIN.N_pezzi_spinti</Name>
 			<Type>INT</Type>
 			<Comment>
 				<![CDATA[Uscite]]>
@@ -1232,28 +1238,28 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.timer_pistone</Name>
+			<Name TaskPrio="1">MAIN.T_pistone</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>12</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.mytime</Name>
+			<Name TaskPrio="1">MAIN.mytimepistone</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>36</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.timer_pist</Name>
+			<Name TaskPrio="1">MAIN.timer_pistone</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>10</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>MAIN.reset_timer</Name>
+			<Name TaskPrio="1">MAIN.reset_timer</Name>
 			<Type>BOOL</Type>
 			<Comment>
 				<![CDATA[Variabili Nastro]]>
@@ -1284,16 +1290,16 @@
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.Giostra</Name>
-			<Type Decoration="20019CBD">ARRAY [0..7] OF POSTO</Type>
+			<Type Decoration="2001940C">ARRAY [0..7] OF POSTO</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>40</IOffset>
-			<BitSize>512</BitSize>
+			<BitSize>384</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.i</Name>
 			<Type>INT</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>104</IOffset>
+			<IOffset>88</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1303,11 +1309,11 @@
 				<![CDATA[Ingressi]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>106</IOffset>
+			<IOffset>90</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.giostra_BUSY</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.giostra_BUSY</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>49</IOffset>
@@ -1429,7 +1435,7 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">MAIN.pennarello_down</Name>
+			<Name Static="Output" TaskPrio="1">MAIN.pennarello_down</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset>27</IOffset>
@@ -1453,64 +1459,113 @@
 			<Name TaskPrio="1">MAIN.T_giostra</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>108</IOffset>
+			<IOffset>92</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.mytimegiostra</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>132</IOffset>
+			<IOffset>116</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.timer_giostra</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>136</IOffset>
+			<IOffset>120</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.T_trapano</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>140</IOffset>
+			<IOffset>124</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.mytimetrapano</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>164</IOffset>
+			<IOffset>148</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.timer_trapano</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>137</IOffset>
+			<IOffset>121</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.T_p1</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>212</IOffset>
+			<IOffset>152</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.mytimep1</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>168</IOffset>
+			<IOffset>176</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.timer_p1</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>138</IOffset>
+			<IOffset>122</IOffset>
 			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_trapano</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>123</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_giostra</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>180</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_p1</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>181</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.T_pennarello</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>268</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_pennarello</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>292</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_pennarello</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>293</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.mytimepennarello</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>296</IOffset>
+			<BitSize>32</BitSize>
 		</Symbol>
 	</Symbols>
 	<VarConfigs/>
