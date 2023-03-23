@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_nuovo.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-23T17:21:25</ChangeDate>
+		<ChangeDate>2023-03-23T18:51:19</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -67,29 +67,37 @@
 	</DirectoryInfos>
 	<DataTypes>
 		<DataType>
-			<Name Decoration="300001C4" Crc32="0500253582" LastChange="2023-03-16T15:31:39">COLORE</Name>
+			<Name Decoration="300001C4" Crc32="3364577806" LastChange="2023-03-23T18:04:50">COLORE</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
-				<Text>rosso</Text>
+				<Text>nienteC</Text>
 				<Enum>0</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>rosso</Text>
+				<Enum>1</Enum>
 			</EnumInfo>
 			<EnumInfo>
 				<Text>altro</Text>
-				<Enum>1</Enum>
+				<Enum>2</Enum>
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="3000021B" Crc32="3510379586" LastChange="2023-03-16T15:35:44">ALTEZZA</Name>
+			<Name Decoration="3000021B" Crc32="2661024310" LastChange="2023-03-23T18:04:46">ALTEZZA</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
-				<Text>basso</Text>
+				<Text>nienteA</Text>
 				<Enum>0</Enum>
 			</EnumInfo>
 			<EnumInfo>
-				<Text>alto</Text>
+				<Text>basso</Text>
 				<Enum>1</Enum>
+			</EnumInfo>
+			<EnumInfo>
+				<Text>alto</Text>
+				<Enum>2</Enum>
 			</EnumInfo>
 		</DataType>
 		<DataType>
@@ -922,7 +930,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="106EB629" Crc32="0014105007" LastChange="2023-03-23T17:21:19">MAIN</Name>
+			<Name Decoration="1072BFDC" Crc32="3419839950" LastChange="2023-03-23T18:51:19">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -1085,6 +1093,12 @@
 					<Name>MAIN.timer_tastatore</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.j</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.condizione</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.INIT</Name>
 				</Symbol>
 				<Symbol>
@@ -1116,6 +1130,12 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN._P1_OCCUPATO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.STEP32</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._STEP32</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.COLORE_RIPOSO</Name>
@@ -1655,6 +1675,20 @@
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>293</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.j</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>354</IOffset>
+			<BitSize>16</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.condizione</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>356</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 	</Symbols>
