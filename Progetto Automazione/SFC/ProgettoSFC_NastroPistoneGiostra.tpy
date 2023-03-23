@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
+		<Path>C:\Users\david\OneDrive\Desktop\Progetto-Automazione-Industriale-Ticchiarelli-Ciotti-main\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-21T18:46:38</ChangeDate>
+		<ChangeDate>2023-03-22T16:25:43</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -922,7 +922,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="105931D5" Crc32="2546003555" LastChange="2023-03-21T18:46:32">MAIN</Name>
+			<Name Decoration="105D3E65" Crc32="3953698419" LastChange="2023-03-22T16:25:39">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -1163,6 +1163,24 @@
 					<Name>MAIN._PENNARELLO_SU</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.PT5_RIPOSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PT5_RIPOSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.PT5_AVANTI</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PT5_AVANTI</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.PT5_OFF</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PT5_OFF</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.GIOSTRA_PRONTA</Name>
 				</Symbol>
 				<Symbol>
@@ -1179,12 +1197,6 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN._PISTONEAVANTI</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.PISTONE_DIETRO</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN._PISTONE_DIETRO</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.NASTRO_AVANTI</Name>
@@ -1218,7 +1230,7 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>MAIN.N_pezzi_spinti</Name>
+			<Name TaskPrio="1">MAIN.N_pezzi_spinti</Name>
 			<Type>INT</Type>
 			<Comment>
 				<![CDATA[Uscite]]>
@@ -1238,28 +1250,28 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.T_pistone</Name>
+			<Name>MAIN.T_pistone</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>12</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.mytimepistone</Name>
+			<Name>MAIN.mytimepistone</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>36</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.timer_pistone</Name>
+			<Name>MAIN.timer_pistone</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
 			<IOffset>10</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.reset_timer</Name>
+			<Name>MAIN.reset_timer</Name>
 			<Type>BOOL</Type>
 			<Comment>
 				<![CDATA[Variabili Nastro]]>
@@ -1369,7 +1381,7 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.pistone_PT5_avanti</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT5_avanti</Name>
 			<Type>BOOL</Type>
 			<IGroup>61473</IGroup>
 			<IOffset>40</IOffset>
@@ -1442,7 +1454,7 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output">MAIN.pistone_PT5_on</Name>
+			<Name Static="Output" TaskPrio="1">MAIN.pistone_PT5_on</Name>
 			<Type>BOOL</Type>
 			<IGroup>61489</IGroup>
 			<IOffset>25</IOffset>
