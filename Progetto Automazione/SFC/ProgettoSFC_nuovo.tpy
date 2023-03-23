@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_NastroPistoneGiostra.pro</Path>
+		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_nuovo.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-23T16:22:22</ChangeDate>
+		<ChangeDate>2023-03-23T17:21:25</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -922,7 +922,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="1068613C" Crc32="1026550369" LastChange="2023-03-23T16:22:19">MAIN</Name>
+			<Name Decoration="106EB629" Crc32="0014105007" LastChange="2023-03-23T17:21:19">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -1061,6 +1061,30 @@
 					<Name>MAIN.reset_timer_pennarello</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.mytimep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.T_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.reset_timer_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.reset_timer_tastatore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.mytimetastatore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.T_tastatore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_tastatore</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.INIT</Name>
 				</Symbol>
 				<Symbol>
@@ -1104,12 +1128,6 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN._TEST_COLORE</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.COLORE_FINE</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN._COLORE_FINE</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.TRAPANO_RIPOSO</Name>
@@ -1511,35 +1529,35 @@
 			<Name TaskPrio="1">MAIN.timer_giostra</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>120</IOffset>
+			<IOffset>90</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.reset_timer_giostra</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>180</IOffset>
+			<IOffset>91</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.T_trapano</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>124</IOffset>
+			<IOffset>120</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.mytimetrapano</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>148</IOffset>
+			<IOffset>144</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.timer_trapano</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>121</IOffset>
+			<IOffset>148</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
@@ -1552,35 +1570,91 @@
 	reset_timer_p1: BOOL;]]>
 			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>123</IOffset>
+			<IOffset>149</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.T_pennarello</Name>
 			<Type Decoration="10060D24">TON</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>268</IOffset>
+			<IOffset>152</IOffset>
 			<BitSize>192</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.mytimepennarello</Name>
 			<Type>TIME</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>296</IOffset>
+			<IOffset>176</IOffset>
 			<BitSize>32</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.timer_pennarello</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>293</IOffset>
+			<IOffset>150</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.reset_timer_pennarello</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
+			<IOffset>151</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.mytimep1</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>296</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.T_p1</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>300</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_p1</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>204</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_p1</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>205</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_tastatore</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
 			<IOffset>292</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.mytimetastatore</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>324</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.T_tastatore</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>328</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_tastatore</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>293</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 	</Symbols>
