@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC_nuovo.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-03-23T18:51:19</ChangeDate>
+		<ChangeDate>2023-04-20T20:39:15</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -12,7 +12,7 @@
 		<Library>
 			<Name>Iecsfc.lib</Name>
 			<Path>C:\TwinCAT\PLC\LIB\Iecsfc.lib</Path>
-			<ChangeDate>1998-05-12T12:03:00</ChangeDate>
+			<ChangeDate>1998-05-12T13:03:00</ChangeDate>
 		</Library>
 	</ProjectInfo>
 	<RoutingInfo>
@@ -84,7 +84,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="3000021B" Crc32="2661024310" LastChange="2023-03-23T18:04:46">ALTEZZA</Name>
+			<Name Decoration="3000021B" Crc32="2441246089" LastChange="2023-03-25T15:46:51">ALTEZZA</Name>
 			<Type>INT</Type>
 			<BitSize>16</BitSize>
 			<EnumInfo>
@@ -101,7 +101,7 @@
 			</EnumInfo>
 		</DataType>
 		<DataType>
-			<Name Decoration="10026B9E" Crc32="3055764713" LastChange="2022-07-13T15:13:48">PEZZO</Name>
+			<Name Decoration="10026B9E" Crc32="4196389390" LastChange="2022-07-13T15:13:48">PEZZO</Name>
 			<BitSize>32</BitSize>
 			<SubItem>
 				<Name>Colore</Name>
@@ -135,6 +135,9 @@
 		<DataType>
 			<Name Decoration="2001940C">ARRAY [0..7] OF POSTO</Name>
 			<Type Decoration="1002826E">POSTO</Type>
+			<Comment>
+				<![CDATA[array di 8 posti]]>
+			</Comment>
 			<BitSize>384</BitSize>
 			<ArrayInfo>
 				<LBound>0</LBound>
@@ -930,7 +933,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="1072BFDC" Crc32="3419839950" LastChange="2023-03-23T18:51:19">MAIN</Name>
+			<Name Decoration="1078D036" Crc32="0725695581" LastChange="2023-04-20T20:39:15">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -949,18 +952,6 @@
 					<Name>MAIN.pistone_on</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.T_pistone</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.mytimepistone</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.timer_pistone</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.reset_timer</Name>
-				</Symbol>
-				<Symbol>
 					<Name>MAIN.fine_corsa_nastro</Name>
 				</Symbol>
 				<Symbol>
@@ -976,61 +967,7 @@
 					<Name>MAIN.giostra_busy</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.sensore_colore</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.trapano_basso</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.trapano_alto</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.tastatore_basso</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.tastatore_alto</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pennarello_alto</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pennarello_basso</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pistone_PT5_avanti</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pistone_PT5_indietro</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pistone_PT6_avanti</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pistone_PT6_indietro</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pezzo_baia</Name>
-				</Symbol>
-				<Symbol>
 					<Name>MAIN.movimento_giostra</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.trapano_on</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.trapano_down</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.tastatore_down</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pennarello_down</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pistone_PT5_on</Name>
-				</Symbol>
-				<Symbol>
-					<Name>MAIN.pistone_PT6_on</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.T_giostra</Name>
@@ -1045,6 +982,33 @@
 					<Name>MAIN.reset_timer_giostra</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.T_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.mytimep1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.reset_timer_p1</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.sensore_colore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.trapano_basso</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.trapano_alto</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.trapano_on</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.trapano_down</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.T_trapano</Name>
 				</Symbol>
 				<Symbol>
@@ -1055,6 +1019,36 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.reset_timer_trapano</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.tastatore_basso</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.tastatore_alto</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.tastatore_down</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.T_tastatore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.mytimetastatore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.timer_tastatore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.reset_timer_tastatore</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.pennarello_alto</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.pennarello_basso</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.pennarello_down</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.T_pennarello</Name>
@@ -1069,34 +1063,37 @@
 					<Name>MAIN.reset_timer_pennarello</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.mytimep1</Name>
+					<Name>MAIN.pistone_PT5_avanti</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.T_p1</Name>
+					<Name>MAIN.pistone_PT5_indietro</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.reset_timer_p1</Name>
+					<Name>MAIN.pistone_PT5_on</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.timer_p1</Name>
+					<Name>MAIN.pistone_PT6_avanti</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.reset_timer_tastatore</Name>
+					<Name>MAIN.pistone_PT6_indietro</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.mytimetastatore</Name>
+					<Name>MAIN.pistone_PT6_on</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.T_tastatore</Name>
+					<Name>MAIN.pezzo_baia</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.timer_tastatore</Name>
+					<Name>MAIN.wait_baia</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.n_mezzi_giri_giostra</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.j</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.condizione</Name>
+					<Name>MAIN.condizione_1_posto_true</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.INIT</Name>
@@ -1132,10 +1129,10 @@
 					<Name>MAIN._P1_OCCUPATO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.STEP32</Name>
+					<Name>MAIN.P1_FINE</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._STEP32</Name>
+					<Name>MAIN._P1_FINE</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.COLORE_RIPOSO</Name>
@@ -1144,10 +1141,28 @@
 					<Name>MAIN._COLORE_RIPOSO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.TEST_COLORE</Name>
+					<Name>MAIN.PEZZO_SU_SENSORE</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._TEST_COLORE</Name>
+					<Name>MAIN._PEZZO_SU_SENSORE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.COLORE_ROSSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._COLORE_ROSSO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.ALTRO_COLORE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._ALTRO_COLORE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.COLORE_FINE</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._COLORE_FINE</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.TRAPANO_RIPOSO</Name>
@@ -1168,10 +1183,10 @@
 					<Name>MAIN._TRAPANO_AVVIO</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.TRAPANO_SU</Name>
+					<Name>MAIN.TRAPANO_FINE</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._TRAPANO_SU</Name>
+					<Name>MAIN._TRAPANO_FINE</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.TASTATORE_RIPOSO</Name>
@@ -1186,10 +1201,10 @@
 					<Name>MAIN._TASTATORE_GIU</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.TASTATORE_SU</Name>
+					<Name>MAIN.TASTATORE_FINE</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._TASTATORE_SU</Name>
+					<Name>MAIN._TASTATORE_FINE</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.PENNARELLO_RIPOSO</Name>
@@ -1204,10 +1219,10 @@
 					<Name>MAIN._PENNARELLO_GIU</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.PENNARELLO_SU</Name>
+					<Name>MAIN.PENNARELLO_FINE</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._PENNARELLO_SU</Name>
+					<Name>MAIN._PENNARELLO_FINE</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.PT5_RIPOSO</Name>
@@ -1264,6 +1279,12 @@
 					<Name>MAIN._GIOSTRA_ON</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.GIOSTRA_IN_MOVIMENTO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._GIOSTRA_IN_MOVIMENTO</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.PISTONEAVANTI</Name>
 				</Symbol>
 				<Symbol>
@@ -1282,6 +1303,9 @@
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">MAIN.pezzo_magazzino</Name>
 			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala la presenza di un pezzo nel magazzino]]>
+			</Comment>
 			<IGroup>61473</IGroup>
 			<IOffset>0</IOffset>
 			<BitSize>1</BitSize>
@@ -1289,6 +1313,9 @@
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">MAIN.pistone_avanti</Name>
 			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pistone è avanti]]>
+			</Comment>
 			<IGroup>61473</IGroup>
 			<IOffset>2</IOffset>
 			<BitSize>1</BitSize>
@@ -1296,6 +1323,9 @@
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">MAIN.pistone_indietro</Name>
 			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pistone è indietro]]>
+			</Comment>
 			<IGroup>61473</IGroup>
 			<IOffset>4</IOffset>
 			<BitSize>1</BitSize>
@@ -1304,7 +1334,7 @@
 			<Name TaskPrio="1">MAIN.N_pezzi_spinti</Name>
 			<Type>INT</Type>
 			<Comment>
-				<![CDATA[Uscite]]>
+				<![CDATA[variabile che incrementa di 1 quando viene spinto un pezzo sul nastro]]>
 			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>8</IOffset>
@@ -1314,48 +1344,17 @@
 			<Name Static="Output" TaskPrio="1">MAIN.pistone_on</Name>
 			<Type>BOOL</Type>
 			<Comment>
-				<![CDATA[TimerPistone]]>
+				<![CDATA[attuatore del pistone]]>
 			</Comment>
 			<IGroup>61489</IGroup>
 			<IOffset>2</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name>MAIN.T_pistone</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>12</IOffset>
-			<BitSize>192</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>MAIN.mytimepistone</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>36</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>MAIN.timer_pistone</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>10</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name>MAIN.reset_timer</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[Variabili Nastro]]>
-			</Comment>
-			<IGroup>16448</IGroup>
-			<IOffset>11</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
 			<Name Static="Input" TaskPrio="1">MAIN.fine_corsa_nastro</Name>
 			<Type>BOOL</Type>
 			<Comment>
-				<![CDATA[Uscite]]>
+				<![CDATA[sensore che segnala il passaggio di un pezzo a fine nastro]]>
 			</Comment>
 			<IGroup>61473</IGroup>
 			<IOffset>6</IOffset>
@@ -1365,7 +1364,7 @@
 			<Name Static="Output" TaskPrio="1">MAIN.nastro_on</Name>
 			<Type>BOOL</Type>
 			<Comment>
-				<![CDATA[Variabili Giostra]]>
+				<![CDATA[attuatore del nastro]]>
 			</Comment>
 			<IGroup>61489</IGroup>
 			<IOffset>0</IOffset>
@@ -1374,6 +1373,9 @@
 		<Symbol>
 			<Name TaskPrio="1">MAIN.Giostra</Name>
 			<Type Decoration="2001940C">ARRAY [0..7] OF POSTO</Type>
+			<Comment>
+				<![CDATA[array di 8 posti]]>
+			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>40</IOffset>
 			<BitSize>384</BitSize>
@@ -1382,7 +1384,7 @@
 			<Name TaskPrio="1">MAIN.i</Name>
 			<Type>INT</Type>
 			<Comment>
-				<![CDATA[Ingressi]]>
+				<![CDATA[indice che incrementa ad ogni movimento della giostra e usato per lavorare con l'array]]>
 			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>88</IOffset>
@@ -1391,149 +1393,29 @@
 		<Symbol>
 			<Name Static="Input" TaskPrio="1">MAIN.giostra_busy</Name>
 			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala il movimento della giostra]]>
+			</Comment>
 			<IGroup>61473</IGroup>
 			<IOffset>49</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.sensore_colore</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>17</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.trapano_basso</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>21</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.trapano_alto</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>19</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.tastatore_basso</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>43</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.tastatore_alto</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>23</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.pennarello_alto</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>44</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input">MAIN.pennarello_basso</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>45</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT5_avanti</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>40</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT5_indietro</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>41</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT6_avanti</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>47</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT6_indietro</Name>
-			<Type>BOOL</Type>
-			<IGroup>61473</IGroup>
-			<IOffset>46</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Input" TaskPrio="1">MAIN.pezzo_baia</Name>
-			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[Uscite]]>
-			</Comment>
-			<IGroup>61473</IGroup>
-			<IOffset>42</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
 			<Name Static="Output" TaskPrio="1">MAIN.movimento_giostra</Name>
 			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[attuatore giostra che la muove di 1 posto]]>
+			</Comment>
 			<IGroup>61489</IGroup>
 			<IOffset>28</IOffset>
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Output" TaskPrio="1">MAIN.trapano_on</Name>
-			<Type>BOOL</Type>
-			<IGroup>61489</IGroup>
-			<IOffset>31</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Output" TaskPrio="1">MAIN.trapano_down</Name>
-			<Type>BOOL</Type>
-			<IGroup>61489</IGroup>
-			<IOffset>56</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Output" TaskPrio="1">MAIN.tastatore_down</Name>
-			<Type>BOOL</Type>
-			<IGroup>61489</IGroup>
-			<IOffset>30</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Output" TaskPrio="1">MAIN.pennarello_down</Name>
-			<Type>BOOL</Type>
-			<IGroup>61489</IGroup>
-			<IOffset>27</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Output" TaskPrio="1">MAIN.pistone_PT5_on</Name>
-			<Type>BOOL</Type>
-			<IGroup>61489</IGroup>
-			<IOffset>25</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name Static="Output" TaskPrio="1">MAIN.pistone_PT6_on</Name>
-			<Type>BOOL</Type>
-			<IGroup>61489</IGroup>
-			<IOffset>29</IOffset>
-			<BitSize>1</BitSize>
-		</Symbol>
-		<Symbol>
 			<Name TaskPrio="1">MAIN.T_giostra</Name>
 			<Type Decoration="10060D24">TON</Type>
+			<Comment>
+				<![CDATA[timer giostra di 2s]]>
+			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>92</IOffset>
 			<BitSize>192</BitSize>
@@ -1560,8 +1442,92 @@
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
+			<Name TaskPrio="1">MAIN.T_p1</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<Comment>
+				<![CDATA[timer buffer 1]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>300</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.mytimep1</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>296</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_p1</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>205</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_p1</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>204</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.sensore_colore</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala i pezzi di colore rosso]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>17</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.trapano_basso</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il trapano è basso]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>21</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.trapano_alto</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[ensore che segnala se il trapano è alto]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>19</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">MAIN.trapano_on</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[attuatore per l'attivazione della punta del trapano]]>
+			</Comment>
+			<IGroup>61489</IGroup>
+			<IOffset>31</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">MAIN.trapano_down</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[attuatore per fare scendere o salire il trapano]]>
+			</Comment>
+			<IGroup>61489</IGroup>
+			<IOffset>56</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
 			<Name TaskPrio="1">MAIN.T_trapano</Name>
 			<Type Decoration="10060D24">TON</Type>
+			<Comment>
+				<![CDATA[timer trapano di 2s]]>
+			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>120</IOffset>
 			<BitSize>192</BitSize>
@@ -1583,19 +1549,107 @@
 		<Symbol>
 			<Name TaskPrio="1">MAIN.reset_timer_trapano</Name>
 			<Type>BOOL</Type>
-			<Comment>
-				<![CDATA[T_p1: TON;
-	mytimep1: TIME;
-	timer_p1: BOOL;
-	reset_timer_p1: BOOL;]]>
-			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>149</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.tastatore_basso</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il tastatore è basso]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>43</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.tastatore_alto</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il tastatore è alto]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>23</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">MAIN.tastatore_down</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[attuatore tastatore]]>
+			</Comment>
+			<IGroup>61489</IGroup>
+			<IOffset>30</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.T_tastatore</Name>
+			<Type Decoration="10060D24">TON</Type>
+			<Comment>
+				<![CDATA[timer tastatore di 2s]]>
+			</Comment>
+			<IGroup>16448</IGroup>
+			<IOffset>328</IOffset>
+			<BitSize>192</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.mytimetastatore</Name>
+			<Type>TIME</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>324</IOffset>
+			<BitSize>32</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.timer_tastatore</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>293</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.reset_timer_tastatore</Name>
+			<Type>BOOL</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>292</IOffset>
+			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.pennarello_alto</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pennarello è alto]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>44</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input">MAIN.pennarello_basso</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pennarello è basso]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>45</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">MAIN.pennarello_down</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[attuatore pennarello]]>
+			</Comment>
+			<IGroup>61489</IGroup>
+			<IOffset>27</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
 			<Name TaskPrio="1">MAIN.T_pennarello</Name>
 			<Type Decoration="10060D24">TON</Type>
+			<Comment>
+				<![CDATA[timer pennarello di 2s]]>
+			</Comment>
 			<IGroup>16448</IGroup>
 			<IOffset>152</IOffset>
 			<BitSize>192</BitSize>
@@ -1622,60 +1676,91 @@
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.mytimep1</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>296</IOffset>
-			<BitSize>32</BitSize>
+			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT5_avanti</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pistone 5 è avanti]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>40</IOffset>
+			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.T_p1</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>300</IOffset>
-			<BitSize>192</BitSize>
+			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT5_indietro</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pistone 5 è indietro]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>41</IOffset>
+			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.reset_timer_p1</Name>
+			<Name Static="Output" TaskPrio="1">MAIN.pistone_PT5_on</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[attuatore pistone 5]]>
+			</Comment>
+			<IGroup>61489</IGroup>
+			<IOffset>25</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT6_avanti</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pistone 6 è avanti]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>47</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.pistone_PT6_indietro</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala se il pistone 6 è indietro]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>46</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Output" TaskPrio="1">MAIN.pistone_PT6_on</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[attuatore pistone 6]]>
+			</Comment>
+			<IGroup>61489</IGroup>
+			<IOffset>29</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name Static="Input" TaskPrio="1">MAIN.pezzo_baia</Name>
+			<Type>BOOL</Type>
+			<Comment>
+				<![CDATA[sensore che segnala la presenza di un pezzo sulla baia]]>
+			</Comment>
+			<IGroup>61473</IGroup>
+			<IOffset>42</IOffset>
+			<BitSize>1</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.wait_baia</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>204</IOffset>
+			<IOffset>359</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.timer_p1</Name>
-			<Type>BOOL</Type>
+			<Name>MAIN.n_mezzi_giri_giostra</Name>
+			<Type>INT</Type>
+			<Comment>
+				<![CDATA[Variabili utilizzate nel for per la verifica di almeno 1 posto con presenza a  true]]>
+			</Comment>
 			<IGroup>16448</IGroup>
-			<IOffset>205</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">MAIN.reset_timer_tastatore</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>292</IOffset>
-			<BitSize>8</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">MAIN.mytimetastatore</Name>
-			<Type>TIME</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>324</IOffset>
-			<BitSize>32</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">MAIN.T_tastatore</Name>
-			<Type Decoration="10060D24">TON</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>328</IOffset>
-			<BitSize>192</BitSize>
-		</Symbol>
-		<Symbol>
-			<Name TaskPrio="1">MAIN.timer_tastatore</Name>
-			<Type>BOOL</Type>
-			<IGroup>16448</IGroup>
-			<IOffset>293</IOffset>
-			<BitSize>8</BitSize>
+			<IOffset>360</IOffset>
+			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
 			<Name TaskPrio="1">MAIN.j</Name>
@@ -1685,10 +1770,10 @@
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name TaskPrio="1">MAIN.condizione</Name>
+			<Name TaskPrio="1">MAIN.condizione_1_posto_true</Name>
 			<Type>BOOL</Type>
 			<IGroup>16448</IGroup>
-			<IOffset>356</IOffset>
+			<IOffset>362</IOffset>
 			<BitSize>8</BitSize>
 		</Symbol>
 	</Symbols>
