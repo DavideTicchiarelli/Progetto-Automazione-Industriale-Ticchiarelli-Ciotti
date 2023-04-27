@@ -2,9 +2,9 @@
 <!--This file is created by the TCatPlcCtrl automatically. Manually changes will be overwritten!-->
 <PlcProjectInfo xmlns:p="http://www.beckhoff.com/2002/01/TcPlcProjectDesc">
 	<ProjectInfo>
-		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC.pro</Path>
+		<Path>C:\Users\david\OneDrive\Desktop\Progetto-Automazione-Industriale-Ticchiarelli-Ciotti-main\Progetto Automazione\SFC\ProgettoSFC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-04-21T14:16:51</ChangeDate>
+		<ChangeDate>2023-04-27T19:23:02</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -933,7 +933,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="108918DB" Crc32="3630752654" LastChange="2023-04-21T14:16:51">MAIN</Name>
+			<Name Decoration="10903BEE" Crc32="3731922248" LastChange="2023-04-27T19:23:01">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -1111,6 +1111,9 @@
 					<Name>MAIN.blocco_giostra</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.giri</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.INIT</Name>
 				</Symbol>
 				<Symbol>
@@ -1198,6 +1201,12 @@
 					<Name>MAIN._TRAPANO_AVVIO</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.TRAPANO_SU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._TRAPANO_SU</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.TRAPANO_FINE</Name>
 				</Symbol>
 				<Symbol>
@@ -1234,6 +1243,12 @@
 					<Name>MAIN._PENNARELLO_GIU</Name>
 				</Symbol>
 				<Symbol>
+					<Name>MAIN.PENNARELLO_SU</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PENNARELLO_SU</Name>
+				</Symbol>
+				<Symbol>
 					<Name>MAIN.PENNARELLO_FINE</Name>
 				</Symbol>
 				<Symbol>
@@ -1250,6 +1265,12 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN._PT5_AVANTI</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.PT5_INDIETRO</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN._PT5_INDIETRO</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.PT5_FINE</Name>
@@ -1312,28 +1333,28 @@
 					<Name>MAIN._CONTROLLO_GIOSTRA</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.ATTESA_BAIA</Name>
+					<Name>MAIN.BAIA2_ATTESA</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._ATTESA_BAIA</Name>
+					<Name>MAIN._BAIA2_ATTESA</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.BAIA_LIBERATA</Name>
+					<Name>MAIN.BAIA2_LIBERA</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._BAIA_LIBERATA</Name>
+					<Name>MAIN._BAIA2_LIBERA</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.BAIA_LIBERA</Name>
+					<Name>MAIN.BAIA2_OCCUPATA</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._BAIA_LIBERA</Name>
+					<Name>MAIN._BAIA2_OCCUPATA</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN.BAIA_OCCUPATA</Name>
+					<Name>MAIN.BAIA2_FINE</Name>
 				</Symbol>
 				<Symbol>
-					<Name>MAIN._BAIA_OCCUPATA</Name>
+					<Name>MAIN._BAIA2_FINE</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.PISTONEAVANTI</Name>
@@ -1885,6 +1906,13 @@
 			<IGroup>16448</IGroup>
 			<IOffset>226</IOffset>
 			<BitSize>8</BitSize>
+		</Symbol>
+		<Symbol>
+			<Name>MAIN.giri</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>366</IOffset>
+			<BitSize>16</BitSize>
 		</Symbol>
 	</Symbols>
 	<VarConfigs/>
