@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC\ProgettoSFC.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-04-28T14:51:50</ChangeDate>
+		<ChangeDate>2023-04-28T19:40:05</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -933,7 +933,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="10914023" Crc32="3772807153" LastChange="2023-04-28T14:51:50">MAIN</Name>
+			<Name Decoration="10914023" Crc32="2961643935" LastChange="2023-04-28T19:40:05">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
