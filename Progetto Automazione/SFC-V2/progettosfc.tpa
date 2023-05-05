@@ -1,0 +1,2 @@
+<?xml version="1.0"?>
+<PlcGivenDataInfo><VarConfigAddresses><VarConfigAddress><Name>MAIN.tastatore_lettura</Name><Type>WORD</Type><IGroup>61472</IGroup><IOffset>8</IOffset><BitSize>16</BitSize><Properties><Property><Name>LinkedWith</Name><Value>TIID^Dispositivo 2 (EtherCAT)^Terminale 1 (EK1200)^Terminale 4 (EL3162)^Channel 2^Valore_uscita_tastatore</Value></Property></Properties></VarConfigAddress></VarConfigAddresses></PlcGivenDataInfo>
