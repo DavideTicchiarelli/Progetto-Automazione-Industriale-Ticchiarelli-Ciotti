@@ -4,7 +4,7 @@
 	<ProjectInfo>
 		<Path>C:\Users\david\OneDrive\Desktop\Progetto Automazione\SFC-V1\ProgettoSFC-V1.pro</Path>
 		<IsLibrary>false</IsLibrary>
-		<ChangeDate>2023-05-09T15:55:57</ChangeDate>
+		<ChangeDate>2023-05-10T11:40:37</ChangeDate>
 		<Library>
 			<Name>STANDARD.LIB</Name>
 			<Path>C:\TwinCAT\PLC\LIB\STANDARD.LIB</Path>
@@ -945,7 +945,7 @@
 	</Functions>
 	<Programs>
 		<Program>
-			<Name Decoration="108C1B18" Crc32="4068660781" LastChange="2023-05-09T15:55:57">MAIN</Name>
+			<Name Decoration="108D1E42" Crc32="1215053990" LastChange="2023-05-10T11:40:37">MAIN</Name>
 			<PrgInfo>
 				<CodeIndex>43</CodeIndex>
 				<Symbol>
@@ -1031,6 +1031,9 @@
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.tastatore_lettura</Name>
+				</Symbol>
+				<Symbol>
+					<Name>MAIN.myInt</Name>
 				</Symbol>
 				<Symbol>
 					<Name>MAIN.T_tastatore</Name>
@@ -1625,13 +1628,28 @@
 			<BitSize>1</BitSize>
 		</Symbol>
 		<Symbol>
-			<Name Static="Input">MAIN.tastatore_lettura</Name>
+			<Name Static="Input" TaskPrio="1">MAIN.tastatore_lettura</Name>
 			<Type>WORD</Type>
 			<Comment>
 				<![CDATA[fornisce la lettura dell'altezza dei pezzi]]>
 			</Comment>
 			<IGroup>61472</IGroup>
 			<IOffset VarConfig="Changeable">8</IOffset>
+			<BitSize>16</BitSize>
+			<Properties>
+				<Property>
+					<Name>LinkedWith</Name>
+					<Value>
+						<![CDATA[TIID^Dispositivo 2 (EtherCAT)^Terminale 1 (EK1200)^Terminale 4 (EL3162)^Channel 1^Value]]>
+					</Value>
+				</Property>
+			</Properties>
+		</Symbol>
+		<Symbol>
+			<Name TaskPrio="1">MAIN.myInt</Name>
+			<Type>INT</Type>
+			<IGroup>16448</IGroup>
+			<IOffset>354</IOffset>
 			<BitSize>16</BitSize>
 		</Symbol>
 		<Symbol>
